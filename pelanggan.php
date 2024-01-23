@@ -105,10 +105,10 @@ require 'ceklogin.php';
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Pelanggan</th>
-                                            <th>No Telepon</th>
-                                            <th>Alamat</th>
-                                            <th>Aksi</th>
+                                            <th>Customer Name</th>
+                                            <th>Telephone Number</th>
+                                            <th>Address</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -154,9 +154,9 @@ require 'ceklogin.php';
                                                 <form method="post">            
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        <input type="text" name="namapelanggan" class="form-control" placeholder="Nama Pelanggan" value="<?=$namapelanggan;?>">
-                                                        <input type="text" name="notelp" class="form-control mt-2" placeholder="Nomor Telepon" value="<?=$notelp;?>">
-                                                        <input type="text" name="alamat" class="form-control mt-2" placeholder="Alamat" value="<?=$alamat;?>">
+                                                        <input type="text" name="namapelanggan" class="form-control" placeholder="Customer Name" value="<?=$namapelanggan;?>">
+                                                        <input type="text" name="notelp" class="form-control mt-2" placeholder="Telephone Number" value="<?=$notelp;?>">
+                                                        <input type="text" name="alamat" class="form-control mt-2" placeholder="Address" value="<?=$alamat;?>">
                                                         <input type="hidden" name="idpl" value="<?=$idpl;?>">
                                                     </div>
                                                     
@@ -187,7 +187,7 @@ require 'ceklogin.php';
                                                 <form method="post">            
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapus pelanggan ini?
+                                                        Are you sure you want to delete this customer ?
                                                         <input type="hidden" name="idpl" value="<?=$idpl;?>">
                                                     </div>
                                                     
@@ -245,7 +245,7 @@ require 'ceklogin.php';
         
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Tambah Data Pelanggan</h4>
+            <h4 class="modal-title">Add Customer Data</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
@@ -253,9 +253,9 @@ require 'ceklogin.php';
             <form method="post">            
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <input type="text" name="namapelanggan" class="form-control" placeholder="Nama Pelanggan">
-                    <input type="text" name="notelp" class="form-control mt-2" placeholder="No Telepon">
-                    <input type="text" name="alamat" class="form-control mt-2" placeholder="Alamat">
+                    <input type="text" name="namapelanggan" class="form-control" placeholder="Customer Name">
+                    <input type="text" name="notelp" class="form-control mt-2" placeholder="Telephone Number">
+                    <input type="text" name="alamat" class="form-control mt-2" placeholder="Address">
                 </div>
                 
                 <!-- Modal footer -->
