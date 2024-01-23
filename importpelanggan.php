@@ -24,10 +24,9 @@ $h2 = mysqli_num_rows($h1);
 
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div class="sb-nav-link-icon ml-3"><i class="fas fa-gear fa-spin" style="font-size:24px;color:red"></i></div>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">Zar Automotive</a>
+            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
            
@@ -40,33 +39,29 @@ $h2 = mysqli_num_rows($h1);
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                                Order
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-archive" ></i></div>
-                                Stock Barang
+                                <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                Barang Masuk
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends" style="color:yellow"></i></div>
-                                Kelola Pelanggan
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"style="color:black"></i></div>
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
                     </div>
                 </nav>
             </div>

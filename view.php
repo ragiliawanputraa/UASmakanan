@@ -31,25 +31,11 @@ if(isset($_GET['idp'])){
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div class="sb-nav-link-icon ml-3"><i class="fas fa-gear fa-spin" style="font-size:24px;color:red"></i></div>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">Zar Automotive</a>
+            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
            
@@ -62,41 +48,37 @@ if(isset($_GET['idp'])){
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart" style="color:yellow"></i></div>
-                                Order
+                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart" style="color:black"></i></div>
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                Stock Barang
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                Barang Masuk
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Kelola Pelanggan
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Data Pesanan : <?=$idp;?></h1>
-                        <h4 class="mt-3">Nama Pelanggan : <?=$namapel;?></h4>
+                        <h1 class="mt-4">Order ID : <?=$idp;?></h1>
+                        <h4 class="mt-3">Customer Name : <?=$namapel;?></h4>
 
                         <div class="row">
                             <!-- Bagian untuk Tambah Barang -->
@@ -104,49 +86,34 @@ if(isset($_GET['idp'])){
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-receipt me-1"></i>
-                                        Tambah Barang
+                                        ADD ITEM
                                     </div>
                                     <div class="card-body">
                                         <!-- Button to Open the Modal -->
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-                                            Tambah Barang 
+                                            ADD ITEM
                                         </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Bagian untuk Struk -->
-                            <div class="col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-receipt me-1"></i>
-                                        Struk Pembelian
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Tampilkan detail struk di sini -->
-                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#receiptModal">
-                                            Generate Struk
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Data Pesanan
+                                ORDER DATA
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Produk</th>
-                                            <th>Harga Satuan</th>
-                                            <th>Jumlah</th>
-                                            <th>Sub-Total</th>
-                                            <th>Aksi</th>
+                                            <th>Item Name</th>
+                                            <th>Unit Price</th>
+                                            <th>Amount</th>
+                                            <th>Subtotal</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -188,7 +155,7 @@ if(isset($_GET['idp'])){
                                             
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
-                                                <h4 class="modal-title">Edit Data Detail Pesanan</h4>
+                                                <h4 class="modal-title">Edit Order Detail</h4>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
                                                 
@@ -222,7 +189,7 @@ if(isset($_GET['idp'])){
                                             
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
-                                                <h4 class="modal-title">Apakah Anda Yakin Ingin Menghapus Barang Ini?</h4>
+                                                <h4 class="modal-title">Are you sure you want to delete this item ?</h4>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
                                                 
@@ -230,7 +197,7 @@ if(isset($_GET['idp'])){
                                                 <form method="post">            
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        Apakah Anda Yakin Ingin Menghapus Barang Ini?                                    
+                                                        Are you sure you want to delete this item ?                                  
                                                         <input type="hidden" name="idp" value="<?=$iddp;?>">
                                                         <input type="hidden" name="idpr" value="<?=$idpr;?>">
                                                         <input type="hidden" name="idpesanan" value="<?=$idp;?>">
@@ -260,7 +227,7 @@ if(isset($_GET['idp'])){
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Zar Automotive 2023</div>
+                            <div class="text-muted">Copyright &copy; burik 2023</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -287,7 +254,7 @@ if(isset($_GET['idp'])){
         
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Pilih Barang</h4>
+            <h4 class="modal-title">Choose Item</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
@@ -295,7 +262,7 @@ if(isset($_GET['idp'])){
             <form method="post">            
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Pilih Barang
+                    Choose Item
                     <select name="idproduk" class="form-control">
 
                     <?php
@@ -340,14 +307,14 @@ if(isset($_GET['idp'])){
             <div class="modal-content">
                 <!-- Header Modal -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Struk Pembelian</h4>
+                    <h4 class="modal-title">Order Bill</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Isi Modal -->
                 <div class="modal-body">
                     <!-- Tampilkan detail struk secara dinamis menggunakan PHP -->
-                    <h5 class="mb-2">ID Pesanan: <?= $idp; ?></h5>
+                    <h5 class="mb-2">ID ORDER: <?= $idp; ?></h5>
                     <h5 class="mb-4">Atas Nama: <?= $namapel; ?></h5>
                     <table class="table">
                         <thead>
