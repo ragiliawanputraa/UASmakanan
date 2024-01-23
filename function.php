@@ -3,7 +3,7 @@
 session_start();
 
 //Bikin Koneksi
-$conn = mysqli_connect('localhost:3307', 'root', '', 'cashierOtomotif');
+$conn = mysqli_connect('localhost:3306', 'root', '', 'UASmakanan');
 
 //login
 if(isset($_POST['login'])){
