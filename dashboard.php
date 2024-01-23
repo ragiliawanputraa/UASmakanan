@@ -27,26 +27,11 @@ $h8 = mysqli_num_rows($h7);
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
-
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div class="sb-nav-link-icon ml-3"><i class="fas fa-gear fa-spin" style="font-size:24px;color:red"></i></div>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">Zar Automotive</a>
+            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
            
@@ -58,73 +43,56 @@ $h8 = mysqli_num_rows($h7);
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
-                                <div class="sb-nav-link-icon"><i class="fa fa-bar-chart" style="color:yellow"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"style="color:black"></i></div>
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart" ></i></div>
-                                Order
+                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                Stock Barang
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                Barang Masuk
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Kelola Pelanggan
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-3">Dashboard</h1>
+                        <h1 class="mt-4 mb-3">DASHBOARD</h1>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Jumlah Pemesan : <?=$h2;?> </div>
+                                    <div class="card-body">TOTAL ORDER : <?=$h2;?> </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Jumlah Stock Barang : <?=$h4;?> </div>
+                                    <div class="card-body">TOTAL STOCK : <?=$h4;?> </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Jumlah Barang Masuk : <?=$h6;?> </div>
+                                    <div class="card-body">TOTAL STOCK IN : <?=$h6;?> </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">Jumlah Pelanggan : <?=$h8;?> </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tambahkan elemen canvas ini untuk merender grafik -->
-                        <div class="col-xl-12">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-chart-bar me-1"></i>
-                                    Jumlah Data
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="barChart" width="100%" height="40"></canvas>
+                                    <div class="card-body">TOTAL CUSTOMER : <?=$h8;?> </div>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +104,7 @@ $h8 = mysqli_num_rows($h7);
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Zar Automotive 2023</div>
+                            <div class="text-muted">Copyright &copy; burik 2023</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

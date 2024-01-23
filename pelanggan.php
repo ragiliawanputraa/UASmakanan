@@ -18,25 +18,11 @@ require 'ceklogin.php';
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div class="sb-nav-link-icon ml-3"><i class="fas fa-gear fa-spin" style="font-size:24px;color:red"></i></div>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">Zar Automotive</a>
+            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
            
@@ -49,52 +35,48 @@ require 'ceklogin.php';
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                                Order
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                Stock Barang
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                Barang Masuk
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends" style="color:yellow"></i></div>
-                                Kelola Pelanggan
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"style="color:black"></i></div>
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-3">Data Pelanggan</h1>
+                        <h1 class="mt-4 mb-3">CUSTOMER DATA</h1>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-receipt me-1"></i>
-                                Tambah Pelanggan
+                                ADD CUSTOMER
                             </div>
                             <div class="card-body">
                                 <!-- Button to Open the Modal -->
                                 <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#myModal">
-                                    Tambah Pelanggan
+                                    Add Customer
                                 </button>
                                 <button type="button" class="btn btn-success mb-2" onclick="exportToExcel()">
-                                    Export Excel
+                                    Export To Excel
                                 </button>
                                 <script>
                                     function exportToExcel() {
@@ -103,7 +85,7 @@ require 'ceklogin.php';
                                     }
                                 </script>
                                 <button type="button" class="btn btn-warning mb-2" onclick="importToExcel()">
-                                    Import Excel
+                                    Import To Excel
                                 </button>
                                 <script>
                                     function importToExcel() {
@@ -116,7 +98,7 @@ require 'ceklogin.php';
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Data Pelanggan
+                                Customer Data
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">

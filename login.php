@@ -23,21 +23,8 @@ if(!isset($_SESSION['login'])){
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
-    <body class="bg-dark">
+    <body class="bg-light">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -46,8 +33,7 @@ if(!isset($_SESSION['login'])){
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header">
-                                    <h3 class="text-center font-weight-light mt-3 custom-font">Zar Automotive</h3>
-                                        <h4 class="text-center font-weight-light mt-2 ">Login</h4>
+                                        <h4 class="text-center font-weight-light mt-2 ">LOGIN</h4>
                                     </div>
                                     <div class="card-body">
 

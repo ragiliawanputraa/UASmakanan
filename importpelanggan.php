@@ -22,19 +22,6 @@ $h2 = mysqli_num_rows($h1);
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

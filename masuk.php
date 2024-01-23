@@ -18,25 +18,11 @@ require 'ceklogin.php';
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 
-        <style>
-            /* Gaya font untuk teks "Zar Otomotif" */
-            .custom-font {
-                font-family: 'Trade Winds', cursive; /* Sesuaikan nama font dengan yang diinginkan */
-                /*Tambahkan properti lain sesuai kebutuhan, misalnya ukuran font, warna, dll.*/
-            }
-
-            .move-left {
-            margin-left: -40px; /* Sesuaikan nilai negatif ini sesuai dengan seberapa jauh Anda ingin menggeser ke kiri */
-            /*Tambahkan properti lain sesuai kebutuhan*/
-        }
-
-        </style>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div class="sb-nav-link-icon ml-3"><i class="fas fa-gear fa-spin" style="font-size:24px;color:red"></i></div>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">Zar Automotive</a>
+            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
            
@@ -49,53 +35,49 @@ require 'ceklogin.php';
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                                Order
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                Stock Barang
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-cubes" style="color:yellow"></i></div>
-                                Barang Masuk
+                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"style="color:black"></i></div>
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Kelola Pelanggan
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-3">Data Barang Masuk</h1>
+                        <h1 class="mt-4 mb-3">ITEM STOCK IN</h1>
 
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-receipt me-1"></i>
-                                Tambah Barang Masuk
+                                item Stock In
                             </div>
                             <div class="card-body">
                                 <!-- Button to Open the Modal -->
                                 <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#myModal">
-                                    Tambah Barang Masuk
+                                    Item Stock In
                                 </button>
                                 <button type="button" class="btn btn-success mb-2" onclick="exportToExcel()">
-                                    Export Excel
+                                    Export To Excel
                                 </button>
                                 <script>
                                     function exportToExcel() {
@@ -109,17 +91,17 @@ require 'ceklogin.php';
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Data Barang Masuk
+                                Item Stock In
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Produk</th>
-                                            <th>Jumlah</th>
-                                            <th>Tanggal</th>
-                                            <th>Aksi</th>
+                                            <th>Item Name</th>
+                                            <th>Stock</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -159,7 +141,7 @@ require 'ceklogin.php';
                                             
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
-                                                <h4 class="modal-title">Edit Data Barang Masuk</h4>
+                                                <h4 class="modal-title">Edit Data Item Stock in</h4>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
                                                 
@@ -192,7 +174,7 @@ require 'ceklogin.php';
                                             
                                                 <!-- Modal Header -->
                                                 <div class="modal-header">
-                                                <h4 class="modal-title">Delete Data Barang Masuk</h4>
+                                                <h4 class="modal-title">Delete Data Item</h4>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
                                                 
@@ -200,7 +182,7 @@ require 'ceklogin.php';
                                                 <form method="post">            
                                                     <!-- Modal body -->
                                                     <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapus data ini?
+                                                        Are you sure you want to delete ?
                                                         <input type="hidden" name="idp" value="<?=$idproduk;?>">
                                                         <input type="hidden" name="idm" value="<?=$idmasuk;?>">
                                                     </div>
@@ -232,7 +214,7 @@ require 'ceklogin.php';
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Zar Automotive 2023</div>
+                            <div class="text-muted">Copyright &copy; burik 2023</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -259,7 +241,7 @@ require 'ceklogin.php';
         
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Pilih Barang</h4>
+            <h4 class="modal-title">Choose Item</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
@@ -267,7 +249,7 @@ require 'ceklogin.php';
             <form method="post">            
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Pilih Barang
+                    Choose Item
                     <select name="idproduk" class="form-control">
 
                     <?php
@@ -290,7 +272,7 @@ require 'ceklogin.php';
 
                     </select>
 
-                    <input type="number" name="qty" class="form-control mt-4" placeholder="Jumlah" min="1" required>
+                    <input type="number" name="qty" class="form-control mt-4" placeholder="Stock" min="1" required>
 
                 </div>
                 

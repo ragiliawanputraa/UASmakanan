@@ -51,27 +51,27 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"></i></div>
-                                Dashboard
+                                DASHBOARD
                             </a>
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart" style="color:yellow"></i></div>
-                                Order
+                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart" style="color:black"></i></div>
+                                ORDER
                             </a>
                             <a class="nav-link" href="stock.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                Stock Barang
+                                FOOD STOCK
                             </a>
                             <a class="nav-link" href="masuk.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                Barang Masuk
+                                STOCK IN
                             </a>
                             <a class="nav-link" href="pelanggan.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                Kelola Pelanggan
+                                CUSTOMER
                             </a>
                             <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                Logout
+                                LOGOUT
                             </a>
                         </div>
                     </div>
@@ -80,19 +80,19 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-3">Data Pesanan</h1>
+                        <h1 class="mt-4 mb-3">DATA ORDER</h1>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-receipt me-1"></i>
-                                Tambah Pesanan
+                                Add Order
                             </div>
                             <div class="card-body">
                                 <!-- Button to Open the Modal -->
                                 <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#myModal">
-                                    Tambah Pesanan Baru
+                                    Add New Order
                                 </button>
                                 <button type="button" class="btn btn-success mb-2" onclick="exportToExcel()">
-                                    Export Excel
+                                    Export To Excel
                                 </button>
                                 <script>
                                     function exportToExcel() {
@@ -105,17 +105,17 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Data Pesanan
+                                Data Order
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID Pesanan</th>
-                                            <th>Tanggal</th>
-                                            <th>Nama Pelanggan</th>
-                                            <th>Jumlah</th>
-                                            <th>Aksi</th>
+                                            <th>Order ID</th>
+                                            <th>Date</th>
+                                            <th>Customer Name</th>
+                                            <th>Pcs</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -189,7 +189,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-chart-bar me-1"></i>
-                                    Barang Terjual Per Bulan
+                                    MONTHLY ORDER CHART
                                 </div>
                                 <div class="card-body">
                                     <canvas id="barangTerjualChart"></canvas>
@@ -203,7 +203,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                     data: {
                                         labels: <?= json_encode($labels); ?>,
                                         datasets: [{
-                                            label: 'Jumlah Barang Terjual',
+                                            label: 'Total item Sold',
                                             data: <?= json_encode($data); ?>,
                                             fill: false, // Do not fill the area under the line
                                             borderColor: 'rgba(75, 192, 192, 1)',
@@ -227,7 +227,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Zar Automotive 2023</div>
+                            <div class="text-muted">Copyright &copy; burik 2023</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -254,7 +254,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Tambah Pesanan Baru</h4>
+            <h4 class="modal-title">Add New Order</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
@@ -262,7 +262,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <form method="post">            
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Pilih Pelanggan
+                    Choose Customer
                     <select name="idpelanggan" class="form-control">
 
                     <?php
