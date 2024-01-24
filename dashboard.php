@@ -13,154 +13,156 @@ $h8 = mysqli_num_rows($h7);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Data Pesanan</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
-           
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Menu</div>
-                            <a class="nav-link" href="dashboard.php">
-                                <div class="sb-nav-link-icon"><i class="fa fa-bar-chart"style="color:black"></i></div>
-                                DASHBOARD
-                            </a>
-                            <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                                ORDER
-                            </a>
-                            <a class="nav-link" href="stock.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
-                                FOOD STOCK
-                            </a>
-                            <a class="nav-link" href="masuk.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                                STOCK IN
-                            </a>
-                            <a class="nav-link" href="pelanggan.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                CUSTOMER
-                            </a>
-                            <a class="nav-link" href="logout.php">
-                                <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
-                                LOGOUT
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-3">DASHBOARD</h1>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">TOTAL ORDER : <?=$h2;?> </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">TOTAL STOCK : <?=$h4;?> </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">TOTAL STOCK IN : <?=$h6;?> </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">TOTAL CUSTOMER : <?=$h8;?> </div>
-                                </div>
-                            </div>
-                        </div>
 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Data Pesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+</head>
 
-                        
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3 custom-font" href="index.php">MALSKITCHEN</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 move-left" id="sidebarToggle" href="#!"><i class="fas fa-bars" style="font-size:21px"></i></button>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Menu</div>
+                        <a class="nav-link" href="dashboard.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-bar-chart" style="color:black"></i></div>
+                            DASHBOARD
+                        </a>
+                        <a class="nav-link" href="index.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
+                            ORDER
+                        </a>
+                        <a class="nav-link" href="stock.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
+                            FOOD STOCK
+                        </a>
+                        <a class="nav-link" href="masuk.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                            STOCK IN
+                        </a>
+                        <a class="nav-link" href="pelanggan.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
+                            CUSTOMER
+                        </a>
+                        <a class="nav-link" href="logout.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-sign-out" style="color:red"></i></div>
+                            LOGOUT
+                        </a>
                     </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; burik 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+                </div>
+            </nav>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-        <!-- Tambahkan skrip ini untuk menyertakan pustaka Chart.js -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4 mb-3">DASHBOARD</h1>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">TOTAL ORDER : <?= $h2; ?> </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">TOTAL STOCK : <?= $h4; ?> </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">TOTAL STOCK IN : <?= $h6; ?> </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-info text-white mb-4">
+                                <div class="card-body">TOTAL CUSTOMER : <?= $h8; ?> </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Tambahkan skrip ini untuk menginisialisasi dan mengonfigurasi grafik -->
-        <script>
-            // Grafik Batang
-            var ctx = document.getElementById('barChart').getContext('2d');
-            var barChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Jumlah Pemesan', 'Jumlah Stock Barang', 'Jumlah Barang Masuk', 'Jumlah Pelanggan'],
-                    datasets: [{
-                        label: 'Data',
-                        data: [<?=$h2;?>, <?=$h4;?>, <?=$h6;?>, <?=$h8;?>],
-                        backgroundColor: [
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(255, 205, 86, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                        ],
-                        borderColor: [
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(255, 205, 86, 1)',
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+
+
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; burik 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+    <!-- Tambahkan skrip ini untuk menyertakan pustaka Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Tambahkan skrip ini untuk menginisialisasi dan mengonfigurasi grafik -->
+    <script>
+        // Grafik Batang
+        var ctx = document.getElementById('barChart').getContext('2d');
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jumlah Pemesan', 'Jumlah Stock Barang', 'Jumlah Barang Masuk', 'Jumlah Pelanggan'],
+                datasets: [{
+                    label: 'Data',
+                    data: [<?= $h2; ?>, <?= $h4; ?>, <?= $h6; ?>, <?= $h8; ?>],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 205, 86, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
-        </script>
+            }
+        });
+    </script>
 
-    </body>
+</body>
 
 </html>
